@@ -9,7 +9,7 @@ const screen = {
 
     let repositoriesItens = ''
     user.repositories.forEach(repo =>  repositoriesItens += `<li><a href="${repo.html_url}">${repo.name}</a></li>`)
-    
+
     if(user.repositories.length > 0){
         this.userProfile.innerHTML += `<div class="repositories section">
                                         <h2>Repositórios</h2>           
@@ -24,4 +24,3 @@ const screen = {
 }
 
 export {screen}
-

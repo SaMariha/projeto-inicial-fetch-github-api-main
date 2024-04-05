@@ -1,7 +1,7 @@
-import { getUser} from "./src/scripts/services/user.js"
-import { getRepos} from "./src/scripts/services/repositories.js"
-import { user} from "./src/scripts/objects/user.js"
-import { screen} from "./src/scripts/objects/screen.js"
+import { getUser} from "/src/scripts/services/user.js"
+import { getRepos} from "/src/scripts/services/repositories.js"
+import { user} from "/src/scripts/objects/user.js"
+import { screen} from "/src/scripts/objects/screen.js"
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
@@ -37,12 +37,11 @@ async function getUserData(userName){
     }
 
     const repositoriesReponse = await getRepos(userName)
-    
+
     user.setInfo(userResponse)
     user.setRepos(repositoriesReponse)
 
     screen.renderUser(user)
 }
-
 
 
